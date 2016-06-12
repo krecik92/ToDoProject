@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To do list</title>
+    <style>
+     .jumbotro{
+      margin-bottom: 0px;
+    }
+     .navbar {
+      margin-bottom: 50px;
+      margin-top : 0px;
+      border-radius: 0;
+    }
+   </style>
+</head>
+<body ng-app="app">
+  <div class="jumbotron">
+  <div class="container text-center">
+    <h1>To do list</h1>      
+    <p>Organize your time</p>
+  </div>
+  </div>
+  <nav class="navbar navbar-inverse">
+   <div class="container-fluid">
+     <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>                        
+       </button>
+       <a class="navbar-brand" href="#">Logo</a>
+     </div>
+     <div class="collapse navbar-collapse" id="myNavbar">
+       <ul class="nav navbar-nav">
+         <li class="active"><a ui-sref="home">Home</a></li>
+       </ul>
+     </div>
+   </div>
+  </nav>
+  <div class="container">
+    <ui-view></ui-view>
+  </div>
+  <script type="text/javascript" src="bundle.js"></script>
+</body>
+</html>
