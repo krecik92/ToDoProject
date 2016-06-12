@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <title>To do list</title>
     <style>
-     .jumbotro{
-      margin-bottom: 0px;
+     .jumbotron{
+      margin-bottom: 0;
+      background-color:#FF6633 !important;
+    }
+    .h1_title{
+       font-family: "Impact", charcoal, sans-serif; 
+       color: #FFFFFF;
     }
      .navbar {
       margin-bottom: 50px;
-      margin-top : 0px;
       border-radius: 0;
     }
    </style>
@@ -17,7 +21,7 @@
 <body ng-app="app">
   <div class="jumbotron">
   <div class="container text-center">
-    <h1>To do list</h1>      
+    <h1 class = "h1_title">To do list</h1>      
     <p>Organize your time</p>
   </div>
   </div>
@@ -33,7 +37,9 @@
      </div>
      <div class="collapse navbar-collapse" id="myNavbar">
        <ul class="nav navbar-nav">
-         <li class="active"><a ui-sref="home">Home</a></li>
+         <li class="active"><a ui-sref="home">All tasks</a></li>
+         <li><a ui-sref="active">Active</a></li>
+         <li><a ui-sref="completed">Completed</a></li>
        </ul>
      </div>
    </div>
