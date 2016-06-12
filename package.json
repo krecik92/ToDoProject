@@ -1,0 +1,27 @@
+{
+  "name": "to_do_angular_project",
+  "version": "1.1.0",
+  "description": "Angular Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krecik92/ToDoProject.git"
+  },
+  "keywords": [
+    "todo"
+  ],
+  "author": "Dawid Pieprzyca",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krecik92/ToDoProject/issues"
+  },
+  "homepage": "https://github.com/krecik92/ToDoProject#readme",
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-ui-router": "^0.3.1",
+    "bootstrap": "^3.3.6"
+  }
+}
