@@ -12,9 +12,11 @@
     </div>
 </form>
 <br>
-<div class="panel panel-primary" ng-repeat="item in home.items">
-  <div class="panel-heading">{{item.email}}</div>
-  <div class="panel-body">
-    <a href="" ng-click="home.changeStatusClick(item)">{{item.contents}}</a>      |     {{item.status}}
+<a href=""ng-repeat="item in home.items" ng-click="home.changeStatusClick(item)">
+  <div class="panel panel-primary">
+    <div class="panel-heading">{{item.email}}</div>
+    <div class="panel-body">
+    {{item.contents}}    |     {{item.status}}
+    </div>
   </div>
-</div>
+</a>

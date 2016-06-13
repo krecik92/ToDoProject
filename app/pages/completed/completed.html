@@ -1,6 +1,8 @@
-<div class="panel panel-primary" ng-repeat="item in completed.items">
-  <div class="panel-heading">{{completed.showInactiveTaskEmail(item)}}</div>
-  <div class="panel-body">
-     <a href="" ng-click="completed.removeItem(item)">{{completed.showInactiveTaskContents(item)}}</a>    |     {{completed.showInactiveTaskStatus(item)}}
-  </div>
+<a href="" ng-repeat="item in completed.items | filter: { status: 'done' }" ng-click="completed.removeItem(item)">
+  <div class="panel panel-primary">
+    <div class="panel-heading">{{item.email}}</div>
+    <div class="panel-body">
+       {{item.contents}}   |     {{item.status}}
+    </div>
 </div>
+</a>

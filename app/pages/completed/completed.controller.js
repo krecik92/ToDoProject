@@ -5,21 +5,6 @@ export default class CompletedController {
         this.items = $firebaseArray(this.ref);
         console.log("Connected to Firebase");
     }
-    showInactiveTaskContents(item){
-        if(item.status == "inactive"){
-            return item.contents;
-        }
-    }
-    showInactiveTaskEmail(item){
-        if(item.status == "inactive"){
-            return item.email;
-        }
-    }
-    showInactiveTaskStatus(item){
-        if(item.status == "inactive"){
-            return item.status;
-        }
-    }
      removeItem(item){
         this.items.$remove(item);
     }
