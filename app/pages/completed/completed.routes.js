@@ -1,7 +1,7 @@
 export default function routes($stateProvider) {
   $stateProvider
     .state('completed', {
-      url: '/',
+      url: '/completed',
       template: require('./completed.html'),
       controller: 'CompletedController',
       controllerAs: 'completed'

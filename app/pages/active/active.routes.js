@@ -1,7 +1,7 @@
 export default function routes($stateProvider) {
   $stateProvider
     .state('active', {
-      url: '/',
+      url: '/active',
       template: require('./active.html'),
       controller: 'ActiveController',
       controllerAs: 'active'

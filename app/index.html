@@ -1,49 +1,37 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
     <meta charset="UTF-8">
     <title>To do list</title>
     <style>
      .jumbotron{
       margin-bottom: 0;
-      background-color:#FF6633 !important;
+      background-color:#FFFFFF !important;
     }
-    .h1_title{
-       font-family: "Impact", charcoal, sans-serif; 
-       color: #FFFFFF;
+    #titleList{
+        font-family: Impact, Charcoal, sans-serif;
+        color: #1B3CA6;
     }
-     .navbar {
-      margin-bottom: 50px;
-      border-radius: 0;
+    #subtitleList{
+        font-style: italic;
+        font-weight: bold;
+        color: #1B3CA6;
     }
    </style>
 </head>
 <body ng-app="app">
   <div class="jumbotron">
   <div class="container text-center">
-    <h1 class = "h1_title">To do list</h1>      
-    <p>Organize your time</p>
+    <h1 id="titleList">To do list</h1>      
+    <p id="subtitleList">Organize your time</p>
   </div>
   </div>
-  <nav class="navbar navbar-inverse">
-   <div class="container-fluid">
-     <div class="navbar-header">
-       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>                        
-       </button>
-       <a class="navbar-brand" href="#">Logo</a>
-     </div>
-     <div class="collapse navbar-collapse" id="myNavbar">
-       <ul class="nav navbar-nav">
-         <li class="active"><a ui-sref="home">All tasks</a></li>
-         <li><a ui-sref="active">Active</a></li>
-         <li><a ui-sref="completed">Completed</a></li>
-       </ul>
-     </div>
-   </div>
-  </nav>
+  <ul class="nav nav-pills nav-justified">
+     <li role="presentation" class="active"><a ui-sref="home">All tasks</a></li>
+     <li role="presentation"><a ui-sref="active">Active</a></li>
+     <li role="presentation"><a ui-sref="completed">Completed</a></li>
+  </ul>
   <div class="container">
     <ui-view></ui-view>
   </div>
