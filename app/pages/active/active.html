@@ -1,1 +1,6 @@
-<h1> Active Tasks</h1>
+<div class="panel panel-primary" ng-repeat="item in active.items">
+  <div class="panel-heading">{{item.email}}</div>
+  <div class="panel-body">
+    <a href="" ng-click="active.changeStatusClick(item)">{{item.contents}}</a>      |     {{item.status}}
+  </div>
+</div>

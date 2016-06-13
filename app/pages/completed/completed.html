@@ -1,1 +1,6 @@
-<h1> Completed tasks </h1>
+<div class="panel panel-primary" ng-repeat="item in completed.items">
+  <div class="panel-heading">{{completed.showInactiveTaskEmail(item)}}</div>
+  <div class="panel-body">
+     <a href="" ng-click="completed.removeItem(item)">{{completed.showInactiveTaskContents(item)}}</a>    |     {{completed.showInactiveTaskStatus(item)}}
+  </div>
+</div>

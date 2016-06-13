@@ -1,0 +1,20 @@
+<form ng-submit="home.addItem()" ng-controller="HomeController">
+    <div class="col-md-8">
+            <input type="text" class="form-control" ng-model="home.contents" placeholder="Input task...">
+    </div>
+    <div class="col-md-4">
+            <input type="email" class="form-control" ng-model="home.email" placeholder="Your email">
+    </div>
+    <br>
+    <br>
+    <div class="container text-center">
+    <input class="btn btn-primary btn-lg" type="submit" value="Add Task">
+    </div>
+</form>
+<br>
+<div class="panel panel-primary" ng-repeat="item in home.items">
+  <div class="panel-heading">{{item.email}}</div>
+  <div class="panel-body">
+    <a href="" ng-click="home.changeStatusClick(item)">{{item.contents}}</a>      |     {{item.status}}
+  </div>
+</div>
