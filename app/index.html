@@ -12,12 +12,12 @@
     #titleList{
         font-family: Impact, Charcoal, sans-serif;
         font-size: 80px;
-        color: #1B3CA6;
+        color: #0066CC;
     }
     #subtitleList{
         font-style: italic;
         font-weight: bold;
-        color: #1B3CA6;
+        color: #0066CC;
     }
     .panel-heading{
         font-weight: bold;
@@ -35,10 +35,10 @@
     <p id="subtitleList">Organize your time</p>
   </div>
   </div>
-  <ul class="nav nav-pills nav-justified" >
-     <li role="presentation"><a data-toggle="pill" ui-sref="home">All tasks</a></li>
-     <li role="presentation"><a data-toggle="pill" ui-sref="active">Active</a></li>
-     <li role="presentation"><a data-toggle="pill" ui-sref="completed">Completed</a></li>
+  <ul class="nav nav-pills nav-justified">
+     <li role="presentation" ng-class="{ active: isActive('/home') }"><a data-toggle="pill" ui-sref="home">All tasks</a></li>
+     <li role="presentation" ng-class="{ active: isActive('/active') }"><a data-toggle="pill" ui-sref="active">Active</a></li>
+     <li role="presentation" ng-class="{ active: isActive('/completed') }"><a data-toggle="pill" ui-sref="completed">Completed</a></li>
   </ul>
   <br>
   <div class="container">

@@ -12,7 +12,7 @@ export default class HomeController {
             this.items.$add({
                 contents: this.contents,
                 email: this.email,
-                status: "active"
+                status: false
             }).then(function(ref){
                 var id = ref.key();
                 console.log("Added Task" + id);
@@ -27,7 +27,6 @@ export default class HomeController {
     changeStatusClick(item){
         console.log("Click on panel");
         var taskToUpdate = new Firebase("https://todolist-5ecf4.firebaseio.com/"+item.$id);
-        taskToUpdate.update({ status: "done"});
-        
+        taskToUpdate.update({ status: true});
     }
 }

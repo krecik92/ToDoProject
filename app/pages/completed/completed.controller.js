@@ -11,7 +11,9 @@ export default class CompletedController {
     removeAllItems(){
         var i;
         for(i=0; i<this.items.length; i++){
-            this.items.$remove(this.items[i]);
+            if(this.items[i].status){
+                this.items.$remove(this.items[i]);
+            }
         }
     }
 }
