@@ -8,15 +8,18 @@ export default class HomeController {
     }
     addItem(){
         console.log("Adding Task");
-        this.items.$add({
-            contents: this.contents,
-            email: this.email,
-            status: "active"
-        }).then(function(ref){
-            var id = ref.key();
-            console.log("Added Task" + id);
-            
-        });
+        if(this.email != "" && this.contents != ""){
+            this.items.$add({
+                contents: this.contents,
+                email: this.email,
+                status: "active"
+            }).then(function(ref){
+                var id = ref.key();
+                console.log("Added Task" + id);
+            });
+        }else{
+            console.log("Nie podales danych");
+        }
     }
     removeItem(item){
         this.items.$remove(item);
@@ -25,5 +28,6 @@ export default class HomeController {
         console.log("Click on panel");
         var taskToUpdate = new Firebase("https://todolist-5ecf4.firebaseio.com/"+item.$id);
         taskToUpdate.update({ status: "done"});
+        
     }
 }

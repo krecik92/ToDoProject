@@ -8,12 +8,12 @@
     <br>
     <br>
     <div class="container text-center">
-    <input class="btn btn-primary btn-lg" type="submit" value="Add Task">
+      <input class="btn btn-primary btn-lg" type="submit" value="Add Task">
     </div>
 </form>
 <br>
-<a href="" style="text-decoration:none;" ng-repeat="item in home.items" ng-click="home.changeStatusClick(item)">
-  <div class="panel panel-primary">
+<a href="" style="text-decoration:none;" ng-repeat="item in home.items">
+  <div class="panel panel-default">
     <div class="panel-heading text-center">{{item.email}}</div>
     <div class="panel-body">
       {{item.contents}}

@@ -8,4 +8,10 @@ export default class CompletedController {
      removeItem(item){
         this.items.$remove(item);
     }
+    removeAllItems(){
+        var i;
+        for(i=0; i<this.items.length; i++){
+            this.items.$remove(this.items[i]);
+        }
+    }
 }

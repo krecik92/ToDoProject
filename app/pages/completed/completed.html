@@ -1,8 +1,12 @@
 <a href=""style="text-decoration:none;" ng-repeat="item in completed.items | filter: { status: 'done' }" ng-click="completed.removeItem(item)">
-  <div class="panel panel-default">
+  <div class="panel panel-success">
     <div class="panel-heading text-center">{{item.email}}</div>
     <div class="panel-body">
        {{item.contents}}
     </div>
 </div>
 </a>
+<br>
+<div class="container text-center">
+    <button class="btn btn-primary btn-lg" ng-click="completed.removeAllItems()">Clear Completed</button>
+</div>
