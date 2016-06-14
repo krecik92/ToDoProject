@@ -12,11 +12,11 @@
     </div>
 </form>
 <br>
-<a href=""ng-repeat="item in home.items" ng-click="home.changeStatusClick(item)">
+<a href="" style="text-decoration:none;" ng-repeat="item in home.items" ng-click="home.changeStatusClick(item)">
   <div class="panel panel-primary">
-    <div class="panel-heading">{{item.email}}</div>
+    <div class="panel-heading text-center">{{item.email}}</div>
     <div class="panel-body">
-    {{item.contents}}    |     {{item.status}}
+      {{item.contents}}
     </div>
   </div>
 </a>

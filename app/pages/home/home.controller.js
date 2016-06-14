@@ -1,4 +1,5 @@
 /*global Firebase*/
+/*global $*/
 export default class HomeController {
     constructor($firebaseArray) {
         this.ref = new Firebase("https://todolist-5ecf4.firebaseio.com/");

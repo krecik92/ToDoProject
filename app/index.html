@@ -18,6 +18,13 @@
         font-weight: bold;
         color: #1B3CA6;
     }
+    .panel-heading{
+        font-weight: bold;
+    }
+    .panel-body{
+        font-family: "Trebuchet MS", Helvetica, sans-serif;
+        font-size: 18px;
+    }
    </style>
 </head>
 <body ng-app="app">
@@ -27,10 +34,10 @@
     <p id="subtitleList">Organize your time</p>
   </div>
   </div>
-  <ul class="nav nav-pills nav-justified">
-     <li role="presentation" class="active"><a ui-sref="home">All tasks</a></li>
-     <li role="presentation"><a ui-sref="active">Active</a></li>
-     <li role="presentation"><a ui-sref="completed">Completed</a></li>
+  <ul class="nav nav-pills nav-justified" >
+     <li role="presentation"><a data-toggle="pill" ui-sref="home">All tasks</a></li>
+     <li role="presentation"><a data-toggle="pill" ui-sref="active">Active</a></li>
+     <li role="presentation"><a data-toggle="pill" ui-sref="completed">Completed</a></li>
   </ul>
   <br>
   <div class="container">
