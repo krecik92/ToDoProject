@@ -9,4 +9,17 @@ import active from "./pages/active";
 import completed from "./pages/completed";
 
 const ngModule = angular.module('app', [uirouter, home, active, completed])
-                        .config(routing);
+                        .config(routing)
+                        .controller('NavigationCtrl', ['$scope', '$location', function ($scope, $location) {
+       $scope.isActive = function(viewLocation){
+
+            var active = false;
+
+            if(viewLocation === $location.path()){
+                active = true;
+            }
+
+            return active;
+
+        }
+  }]);

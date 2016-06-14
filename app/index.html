@@ -35,7 +35,7 @@
     <p id="subtitleList">Organize your time</p>
   </div>
   </div>
-  <ul class="nav nav-pills nav-justified">
+  <ul class="nav nav-pills nav-justified" ng-controller="NavigationCtrl">
      <li role="presentation" ng-class="{ active: isActive('/home') }"><a data-toggle="pill" ui-sref="home">All tasks</a></li>
      <li role="presentation" ng-class="{ active: isActive('/active') }"><a data-toggle="pill" ui-sref="active">Active</a></li>
      <li role="presentation" ng-class="{ active: isActive('/completed') }"><a data-toggle="pill" ui-sref="completed">Completed</a></li>
